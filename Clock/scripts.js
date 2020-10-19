@@ -1,7 +1,7 @@
 
 
 
-var timerObj = {
+let timerObj = {
     minutes: 0,
     seconds: 0,
     timerId: 0
@@ -17,7 +17,7 @@ function soundAlarm(){
         audio.play();
     }
 
-    for(var i = 0; i < amount; i++){
+    for(let i = 0; i < amount; i++){
         setTimeout(playSound, 1200*i);
     }
 
@@ -52,7 +52,7 @@ function updateValue(key, value) {
     });
 
     $(input).keyup(function(){
-        updateValue(key, $(input).val()); 
+        updateValue(key, $(input).val() || "0"); 
     });
 
 
